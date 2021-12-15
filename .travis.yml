@@ -1,0 +1,11 @@
+language: python
+cache:
+  directories:
+    - $HOME/.cache/pip
+env: TOXENV=Python3.8
+matrix:
+  include:
+    - python: 3.8
+      dist: xenial
+install: pip install -r dev_requirements.txt
+script: make lint
